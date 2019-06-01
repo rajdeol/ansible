@@ -1,0 +1,1 @@
+# Dockerfile of Ansible image
