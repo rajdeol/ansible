@@ -22,3 +22,6 @@ RUN echo "===> Adding Ansible's PPA..."  && \
     \
     echo "===> Adding hosts for convenience..."  && \
     echo 'localhost' > /etc/ansible/hosts
+    
+ # create ansible directory for easily managing playbooks   
+ RUN mkdir /ansible
