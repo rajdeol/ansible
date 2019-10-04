@@ -22,8 +22,10 @@ RUN echo "===> Adding Ansible's PPA..."  && \
     \
     echo "===> Adding hosts for convenience..."  && \
     echo 'localhost' > /etc/ansible/hosts
- 
- # this is required for accessing Hasicorp vault from the container
+
+ # this is optional, hvac is required if you are using hashicorp for your
+ # secrect storage. Hvac is required for accessing Hasicorp vault from the container
  RUN python -m pip install hvac
- # create ansible directory for easily managing playbooks   
+
+ # create ansible directory for easily managing playbooks
  RUN mkdir /ansible
