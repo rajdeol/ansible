@@ -25,6 +25,7 @@ RUN echo "===> Adding Ansible's PPA..."  && \
 
  # this is optional, hvac is required if you are using hashicorp for your
  # secrect storage. Hvac is required for accessing Hasicorp vault from the container
+ RUN apt-get install -y python-pip
  RUN python -m pip install hvac
 
  # create ansible directory for easily managing playbooks
