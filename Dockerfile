@@ -13,5 +13,9 @@ RUN apt-get update && apt-get install -y software-properties-common && \
 # secrect storage. Hvac is required for accessing Hasicorp vault from the container
 RUN python -m pip install hvac
 
+# this is optional utility, it is used to run dig command and update known_hosts of the container
+# to avoid ssh prompt when you add new servers in your inventory
+RUN apt install dnsutils
+
 # create ansible directory for easily managing playbooks
 RUN mkdir /ansible
