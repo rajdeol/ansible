@@ -15,7 +15,7 @@ RUN python -m pip install hvac
 
 # this is optional utility, it is used to run dig command and update known_hosts of the container
 # to avoid ssh prompt when you add new servers in your inventory
-RUN apt install dnsutils
+RUN apt install -y dnsutils
 
 # create ansible directory for easily managing playbooks
 RUN mkdir /ansible
