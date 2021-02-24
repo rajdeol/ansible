@@ -10,3 +10,7 @@ Once build you can run the image and use the ansible command to see the version 
 ```
 docker run --rm ansible-local ansible --version
 ```
+Command to run a playbook
+```
+docker run --rm rajdeol/ansible ansible-playbook my-playbook-path.yml
+```
